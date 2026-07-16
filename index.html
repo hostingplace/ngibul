@@ -1,0 +1,1391 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>wondr by BNI — Demo QRIS</title>
+  </head>
+  <body>
+    <!-- ================= HOME SCREEN ================= -->
+    <section id="home-screen" class="screen active" data-testid="home-screen">
+      <!-- Top bar -->
+      <header class="top-bar">
+        <div class="logo" aria-label="wondr by BNI">
+          <span class="logo-w">wondr</span>
+          <span class="logo-sub">by BNI</span>
+          <span class="logo-underline"></span>
+        </div>
+        <div class="top-actions">
+          <button class="pill-btn" data-testid="poin-btn">
+            <svg
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="9" />
+              <circle cx="12" cy="12" r="3" fill="currentColor" />
+            </svg>
+            <span>Poin</span>
+          </button>
+          <button class="icon-btn" data-testid="logout-btn" aria-label="Logout">
+            <svg
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+              <polyline points="16 17 21 12 16 7" />
+              <line x1="21" y1="12" x2="9" y2="12" />
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- Greeting -->
+      <div class="greeting-row">
+        <div class="greeting">
+          <span class="avatar-ic">
+            <svg
+              viewBox="0 0 24 24"
+              width="26"
+              height="26"
+              fill="none"
+              stroke="#1f2937"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <circle cx="12" cy="10" r="3" />
+              <path d="M6.5 19a6 6 0 0 1 11 0" />
+            </svg>
+          </span>
+          <h1 class="greeting-text">
+            Hi, Imam Nurainun <span class="wave">!</span>
+          </h1>
+        </div>
+        <div class="greeting-actions">
+          <button class="mini-action" data-testid="notif-btn">
+            <span class="mini-icon">
+              <svg
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                fill="none"
+                stroke="#1f2937"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+                <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+              </svg>
+              <span class="dot-badge"></span>
+            </span>
+            <small>Notifikasi</small>
+          </button>
+          <button class="mini-action" data-testid="bukti-btn">
+            <span class="mini-icon">
+              <svg
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                fill="none"
+                stroke="#1f2937"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+              </svg>
+            </span>
+            <small>Bukti Transaksi</small>
+          </button>
+        </div>
+      </div>
+
+      <!-- Segmented control -->
+      <div class="tabs" role="tablist">
+        <button class="tab" data-testid="tab-insight">Insight</button>
+        <button class="tab active" data-testid="tab-transaksi">
+          Transaksi
+        </button>
+        <button class="tab" data-testid="tab-growth">Growth</button>
+      </div>
+
+      <!-- Rekening -->
+      <div class="section-head">
+        <h2>Rekening transaksi kamu</h2>
+        <a class="link" data-testid="lihat-semua-rekening">Lihat Semua</a>
+      </div>
+
+      <div class="rek-scroll" data-testid="rekening-scroll">
+        <div class="rek-card portfolio" data-testid="rek-portfolio">
+          <div class="portfolio-ic">
+            <svg
+              viewBox="0 0 24 24"
+              width="30"
+              height="30"
+              fill="none"
+              stroke="#0f766e"
+              stroke-width="2"
+            >
+              <path d="M21 12A9 9 0 1 1 12 3v9z" fill="#5eead4" />
+              <path d="M12 3a9 9 0 0 1 9 9h-9z" fill="#0d9488" />
+            </svg>
+          </div>
+          <span class="portfolio-label">Lihat Portfolio</span>
+        </div>
+
+        <div class="rek-card main-account" data-testid="rek-main">
+          <div class="deco-circle deco-1"></div>
+          <div class="deco-circle deco-2"></div>
+          <div class="badge-utama">Utama</div>
+          <div class="rek-title">TAPLUS MUDA</div>
+          <div class="rek-num">1685949916</div>
+          <div class="rek-saldo-label">Saldo efektif</div>
+          <div class="rek-saldo-row">
+            <span class="rek-saldo">Rp********</span>
+            <button
+              class="eye-btn"
+              data-testid="toggle-saldo-btn"
+              aria-label="Tampilkan saldo"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                fill="none"
+                stroke="#1f2937"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="rek-card empty-card">
+          <div class="rek-title" style="color: #94a3b8">Rekening lain</div>
+        </div>
+      </div>
+
+      <div class="dots" aria-hidden="true">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+      <!-- Fitur pilihan -->
+      <div class="section-head">
+        <h2>Fitur pilihan kamu</h2>
+        <a class="link" data-testid="atur-fitur">Atur</a>
+      </div>
+
+      <div class="feature-grid">
+        <button class="feature" data-testid="feature-transfer">
+          <span class="feat-ic teal">
+            <svg
+              viewBox="0 0 24 24"
+              width="26"
+              height="26"
+              fill="none"
+              stroke="#0f766e"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M22 2 11 13" />
+              <path d="M22 2 15 22 11 13 2 9z" />
+            </svg>
+          </span>
+          <small>Transfer</small>
+        </button>
+        <button class="feature" data-testid="feature-tapcash">
+          <span class="feat-ic orange">
+            <span class="tapcash-chip">TapCash</span>
+          </span>
+          <small>TapCash</small>
+        </button>
+        <button class="feature" data-testid="feature-bayar">
+          <span class="feat-ic lavender">
+            <svg
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="#4f46e5"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+              />
+              <polyline points="14 2 14 8 20 8" />
+              <circle cx="16" cy="16" r="2.5" />
+            </svg>
+          </span>
+          <small>Bayar & Beli</small>
+        </button>
+        <button class="feature" data-testid="feature-ewallet">
+          <span class="feat-ic teal">
+            <svg
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="#0f766e"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="3" y="7" width="14" height="12" rx="2" />
+              <path d="M17 11l4-3v8l-4-3" />
+              <path d="M8 12l2 2 4-4" />
+            </svg>
+          </span>
+          <small>E-Wallet</small>
+        </button>
+
+        <button class="feature" data-testid="feature-va">
+          <span class="feat-ic teal">
+            <span class="va-badge">VA<span class="plus">+</span></span>
+          </span>
+          <small>Virtual Account</small>
+        </button>
+        <button class="feature" data-testid="feature-transfer-ln">
+          <span class="feat-ic teal">
+            <svg
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="#0f766e"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="9" />
+              <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" />
+              <circle cx="18" cy="18" r="3.5" fill="#0f766e" stroke="none" />
+              <path d="M18 16v4M16 18h4" stroke="#fff" stroke-width="2" />
+            </svg>
+          </span>
+          <small>Transfer Luar Negeri</small>
+        </button>
+        <button class="feature" data-testid="feature-lifestyle">
+          <span class="feat-ic lavender-strong">
+            <svg
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="#6b21a8"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M6 8h12l-1 12H7z" />
+              <path d="M9 8a3 3 0 0 1 6 0" />
+            </svg>
+          </span>
+          <small>Lifestyle</small>
+        </button>
+        <button class="feature" data-testid="feature-lihat-semua">
+          <span class="feat-ic outline">
+            <svg
+              viewBox="0 0 24 24"
+              width="22"
+              height="22"
+              fill="none"
+              stroke="#0f172a"
+              stroke-width="2.2"
+            >
+              <rect x="3" y="3" width="7" height="7" rx="1.5" />
+              <rect x="14" y="3" width="7" height="7" rx="1.5" />
+              <rect x="3" y="14" width="7" height="7" rx="1.5" />
+              <rect x="14" y="14" width="7" height="7" rx="1.5" />
+            </svg>
+          </span>
+          <small>Lihat Semua</small>
+        </button>
+      </div>
+
+      <!-- Promo -->
+      <div class="section-head">
+        <h2>Promo buat kamu</h2>
+        <a class="link" data-testid="lihat-semua-promo">Lihat Semua</a>
+      </div>
+
+      <div class="promo-scroll">
+        <article class="promo-card peach" data-testid="promo-qris">
+          <span class="promo-tag orange-tag">1 - 31 Juli 2026</span>
+          <h3 class="promo-title">
+            Buka Life Goals,<br />Cashback s.d<br />Rp6,4 Juta Men...
+          </h3>
+          <p class="promo-sub">Life Goals</p>
+
+          <div class="promo-illus">
+            <svg
+              viewBox="0 0 200 200"
+              width="150"
+              height="150"
+              aria-hidden="true"
+            >
+              <circle cx="100" cy="100" r="90" fill="#f4a460" />
+              <circle cx="100" cy="100" r="72" fill="#14b8a6" />
+              <rect
+                x="72"
+                y="55"
+                width="56"
+                height="90"
+                rx="10"
+                fill="#f8fafc"
+                stroke="#0f172a"
+                stroke-width="3"
+              />
+              <rect
+                x="80"
+                y="68"
+                width="40"
+                height="55"
+                rx="4"
+                fill="#22d3ee"
+              />
+              <circle cx="100" cy="132" r="4" fill="#0f172a" />
+              <path
+                d="M60 150c10-8 20-8 40-8s30 0 40 8"
+                stroke="#0f172a"
+                stroke-width="3"
+                fill="none"
+              />
+            </svg>
+          </div>
+
+          <!-- QRIS FLOATING BUTTON -->
+          <button
+            class="qris-btn"
+            id="qrisButton"
+            data-testid="qris-btn"
+            aria-label="QRIS"
+          >
+            <span class="qris-text">QRIS</span>
+          </button>
+        </article>
+
+        <article class="promo-card mint">
+          <span class="promo-tag mint-tag">Hingga 31 Des</span>
+          <h3 class="promo-title">
+            Diskon 20%<br />Makan Bare...<br />Keluarga di...
+          </h3>
+          <p class="promo-sub">QRIS wondr by B...</p>
+        </article>
+      </div>
+
+      <div class="home-indicator"></div>
+    </section>
+
+    <!-- ================= SUCCESS SCREEN ================= -->
+    <section id="success-screen" class="screen" data-testid="success-screen">
+      <div class="success-wrap">
+        <div class="success-illus" aria-hidden="true">
+          <svg viewBox="0 0 240 200" width="220" height="180">
+            <!-- rays -->
+            <g transform="translate(120 100)">
+              <g fill="#5eead4">
+                <path d="M-110 0 L-70 -10 L-70 10 Z" />
+                <path d="M110 0 L70 -10 L70 10 Z" />
+                <path d="M0 -95 L-10 -60 L10 -60 Z" />
+                <path d="M0 95 L-10 60 L10 60 Z" />
+                <path d="M-78 -78 L-55 -45 L-45 -55 Z" />
+                <path d="M78 -78 L55 -45 L45 -55 Z" />
+                <path d="M-78 78 L-55 45 L-45 55 Z" />
+                <path d="M78 78 L55 45 L45 55 Z" />
+              </g>
+            </g>
+            <!-- center card -->
+            <rect
+              x="60"
+              y="45"
+              width="120"
+              height="110"
+              rx="10"
+              fill="#14b8a6"
+            />
+            <!-- QR mockup -->
+            <rect x="90" y="65" width="60" height="60" rx="6" fill="#ffffff" />
+            <g fill="#0f172a">
+              <rect x="96" y="71" width="10" height="10" />
+              <rect x="134" y="71" width="10" height="10" />
+              <rect x="96" y="109" width="10" height="10" />
+              <rect x="112" y="88" width="6" height="6" />
+              <rect x="122" y="98" width="6" height="6" />
+              <rect x="132" y="88" width="6" height="6" />
+              <rect x="112" y="112" width="6" height="6" />
+              <rect x="122" y="80" width="6" height="6" />
+            </g>
+            <!-- shopping bags -->
+            <g>
+              <rect
+                x="52"
+                y="98"
+                width="30"
+                height="38"
+                rx="3"
+                fill="#fb923c"
+              />
+              <path
+                d="M60 98v-6a6 6 0 0 1 14 0v6"
+                fill="none"
+                stroke="#0f172a"
+                stroke-width="2"
+              />
+              <rect
+                x="158"
+                y="98"
+                width="30"
+                height="38"
+                rx="3"
+                fill="#a855f7"
+              />
+              <path
+                d="M166 98v-6a6 6 0 0 1 14 0v6"
+                fill="none"
+                stroke="#0f172a"
+                stroke-width="2"
+              />
+            </g>
+            <!-- legs -->
+            <rect x="108" y="150" width="8" height="24" fill="#0f172a" />
+            <rect x="124" y="150" width="8" height="24" fill="#0f172a" />
+            <ellipse cx="112" cy="178" rx="10" ry="4" fill="#0f172a" />
+            <ellipse cx="128" cy="178" rx="10" ry="4" fill="#0f172a" />
+            <!-- sparkles -->
+            <g fill="#fde68a">
+              <path d="M40 55 l3 -8 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3 z" />
+              <path d="M198 60 l2 -6 l2 6 l6 2 l-6 2 l-2 6 l-2 -6 l-6 -2 z" />
+            </g>
+            <!-- check badge -->
+            <g>
+              <circle cx="188" cy="140" r="20" fill="#ffffff" />
+              <circle cx="188" cy="140" r="17" fill="#059669" />
+              <path
+                d="M180 140 l6 6 l12 -12"
+                stroke="#ffffff"
+                stroke-width="3.5"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+          </svg>
+        </div>
+
+        <h1 class="success-title" data-testid="success-title">
+          Pembayaran QRIS berhasil
+        </h1>
+        <div class="success-amount" data-testid="success-amount">Rp5.000</div>
+        <div class="success-meta">
+          <span id="successDate" data-testid="success-date">09 Jul 2026</span> ·
+          <span id="successTime" data-testid="success-time">19:00:31</span> WIB
+          ·<br />
+          Ref ID:
+          <span id="successRefId" data-testid="success-ref"
+            >20260709190017000521</span
+          >
+        </div>
+
+        <div class="success-actions">
+          <button class="round-action" data-testid="bukti-transaksi-btn">
+            <span class="round-ic orange-solid">
+              <svg
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7z"
+                />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="9" y1="13" x2="15" y2="13" />
+                <line x1="9" y1="17" x2="15" y2="17" />
+              </svg>
+            </span>
+            <small>Bukti Transaksi</small>
+          </button>
+          <button class="round-action" data-testid="bagikan-btn">
+            <span class="round-ic orange-solid">
+              <svg
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="18" cy="5" r="3" />
+                <circle cx="6" cy="12" r="3" />
+                <circle cx="18" cy="19" r="3" />
+                <line x1="8.6" y1="10.5" x2="15.4" y2="6.5" />
+                <line x1="8.6" y1="13.5" x2="15.4" y2="17.5" />
+              </svg>
+            </span>
+            <small>Bagikan</small>
+          </button>
+        </div>
+
+        <div class="info-block">
+          <label>Penerima</label>
+          <div class="info-box">
+            <div class="info-primary">Pentolan telur mama ucu</div>
+            <div class="info-secondary">Makassar (Kota)</div>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <label>Sumber dana</label>
+          <div class="info-box">
+            <div class="info-primary">IMAM NURAINUN MASYHUR</div>
+            <div class="info-secondary">TAPLUS MAHASISWA · *******629</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="success-footer">
+        <button
+          class="btn-primary"
+          id="backHomeBtn"
+          data-testid="back-home-btn"
+        >
+          Kembali ke Beranda
+        </button>
+      </div>
+    </section>
+  </body>
+</html>
+
+<style>
+  /* ============ RESET & BASE ============ */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    font-family:
+      "Segoe UI",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Helvetica Neue",
+      Arial,
+      sans-serif;
+    background: #e5e7eb;
+    color: #0f172a;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  button {
+    font-family: inherit;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: inherit;
+  }
+
+  /* ============ SCREEN CONTAINER (vertical / mobile) ============ */
+  .screen {
+    width: 100%;
+    max-width: 430px;
+    min-height: 100vh;
+    background: #ffffff;
+    display: none;
+    flex-direction: column;
+    position: relative;
+    /* Ditambah padding bawah agar tombol QRIS tidak terpotong sistem navigasi HP */
+    padding-bottom: 90px;
+  }
+  .screen.active {
+    display: flex;
+  }
+
+  /* ============ TOP BAR ============ */
+  .top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px 6px;
+    background: #f2f2f2;
+  }
+  .logo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+  .logo-w {
+    font-size: 30px;
+    font-weight: 800;
+    color: #f97316;
+    letter-spacing: -0.5px;
+  }
+  .logo-sub {
+    font-size: 10px;
+    color: #6b7280;
+    font-weight: 600;
+    margin-top: 2px;
+    letter-spacing: 0.5px;
+  }
+  .logo-underline {
+    position: absolute;
+    left: 46px;
+    bottom: 12px;
+    width: 22px;
+    height: 3px;
+    background: #14b8a6;
+    border-radius: 2px;
+  }
+
+  .top-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .pill-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 1.5px solid #f97316;
+    color: #f97316;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 14px;
+    background: #fff;
+    transition: transform 0.15s;
+  }
+  .pill-btn:active {
+    transform: scale(0.96);
+  }
+  .icon-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    border: 1.5px solid #cbd5e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: #0f172a;
+  }
+
+  /* ============ GREETING ============ */
+  .greeting-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 8px 20px 14px;
+    background: #f2f2f2;
+  }
+  .greeting {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .avatar-ic {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .greeting-text {
+    font-size: 17px;
+    font-weight: 700;
+    color: #0f172a;
+  }
+  .wave {
+    color: #f97316;
+  }
+
+  .greeting-actions {
+    display: flex;
+    gap: 16px;
+  }
+  .mini-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .mini-icon {
+    position: relative;
+  }
+  .dot-badge {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 9px;
+    height: 9px;
+    background: #f97316;
+    border: 2px solid #f2f2f2;
+    border-radius: 999px;
+  }
+  .mini-action small {
+    font-size: 11px;
+    color: #334155;
+    font-weight: 500;
+  }
+
+  /* ============ TABS ============ */
+  .tabs {
+    margin: 4px 20px 18px;
+    background: #fff;
+    border-radius: 999px;
+    padding: 6px;
+    display: flex;
+    box-shadow: 0 2px 10px rgba(15, 23, 42, 0.05);
+  }
+  .tab {
+    flex: 1;
+    padding: 12px 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0f172a;
+    border-radius: 999px;
+    transition:
+      background 0.18s,
+      color 0.18s;
+  }
+  .tab.active {
+    background: #d9f99d;
+    color: #0f172a;
+    font-weight: 700;
+  }
+
+  /* ============ SECTION HEADS ============ */
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    margin-top: 6px;
+  }
+  .section-head h2 {
+    font-size: 17px;
+    font-weight: 800;
+    color: #0f172a;
+  }
+  .link {
+    font-size: 14px;
+    font-weight: 600;
+    color: #f97316;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  /* ============ REKENING CARDS ============ */
+  .rek-scroll {
+    display: flex;
+    gap: 10px;
+    padding: 8px 20px 4px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .rek-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .rek-card {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    border-radius: 18px;
+    padding: 18px;
+    min-height: 160px; /* Dinaikkan dari 140px agar saldo muat */
+    position: relative;
+    overflow: hidden;
+  }
+  .rek-card.portfolio {
+    width: 82px;
+    background: #d1fae5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 6px;
+  }
+  .portfolio-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #0f172a;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .rek-card.main-account {
+    width: 280px; /* Sedikit diperkecil lebarnya agar kartu selanjutnya sedikit terlihat sebagai isyarat swipe */
+    background: linear-gradient(135deg, #fb923c 0%, #f97316 100%);
+    color: #fff;
+  }
+  .deco-circle {
+    position: absolute;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.14);
+  }
+  .deco-1 {
+    width: 200px;
+    height: 200px;
+    right: -60px;
+    top: -60px;
+  }
+  .deco-2 {
+    width: 140px;
+    height: 140px;
+    right: -20px;
+    bottom: -60px;
+    background: rgba(255, 255, 255, 0.09);
+  }
+  .badge-utama {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: #fff;
+    color: #0f172a;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 999px;
+  }
+  .rek-title {
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.95;
+  }
+  .rek-num {
+    font-size: 22px;
+    font-weight: 800;
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+  }
+  .rek-saldo-label {
+    font-size: 12px;
+    margin-top: 14px;
+    opacity: 0.9;
+  }
+  .rek-saldo-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 2px;
+  }
+  .rek-saldo {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #ffffff; /* Diubah ke putih agar kontras di atas kartu oranye */
+  }
+  .eye-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .eye-btn svg {
+    stroke: #ffffff; /* Mengubah warna icon mata menjadi putih agar terlihat jelas */
+  }
+
+  .rek-card.empty-card {
+    width: 60px;
+    background: #f1f5f9;
+  }
+
+  .dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin: 12px 0 4px;
+  }
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: #cbd5e1;
+  }
+  .dot.active {
+    background: #64748b;
+    width: 10px;
+  }
+
+  /* ============ FEATURE GRID ============ */
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px 8px;
+    padding: 8px 20px 6px;
+  }
+  .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.12s;
+  }
+  .feature:active {
+    transform: scale(0.94);
+  }
+  .feature small {
+    font-size: 12px;
+    color: #0f172a;
+    text-align: center;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+  .feat-ic {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .feat-ic.teal {
+    background: #99f6e4;
+  }
+  .feat-ic.orange {
+    background: #fb923c;
+    color: #fff;
+  }
+  .feat-ic.lavender {
+    background: #e0e7ff;
+  }
+  .feat-ic.lavender-strong {
+    background: #d8b4fe;
+  }
+  .feat-ic.outline {
+    background: #fff;
+    border: 1.5px solid #cbd5e1;
+  }
+
+  .tapcash-chip {
+    color: #fff;
+    font-weight: 800;
+    font-size: 13px;
+    font-style: italic;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 4px 6px;
+    border-radius: 6px;
+  }
+  .va-badge {
+    font-weight: 800;
+    font-size: 16px;
+    color: #0f766e;
+    position: relative;
+  }
+  .va-badge .plus {
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    font-size: 14px;
+  }
+
+  /* ============ PROMO ============ */
+  .promo-scroll {
+    display: flex;
+    gap: 12px;
+    padding: 8px 20px 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .promo-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .promo-card {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 280px;
+    border-radius: 18px;
+    padding: 18px;
+    position: relative;
+    min-height: 220px;
+    overflow: hidden;
+  }
+  .promo-card.peach {
+    background: #fed7aa;
+  }
+  .promo-card.mint {
+    background: #a7f3d0;
+  }
+
+  .promo-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .orange-tag {
+    background: #fb923c;
+    color: #fff;
+  }
+  .mint-tag {
+    background: #14b8a6;
+    color: #fff;
+  }
+
+  .promo-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+  }
+  .promo-sub {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #334155;
+  }
+
+  .promo-illus {
+    position: absolute;
+    right: -14px;
+    bottom: 8px;
+    pointer-events: none;
+  }
+
+  /* ============ QRIS FLOATING BUTTON ============ */
+  .qris-btn {
+    position: fixed; /* Diubah menjadi fixed agar benar-benar melayang secara global */
+    bottom: 30px; /* Diberikan jarak yang cukup agar tidak terbentur navigation bar HP */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0f172a;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    padding: 14px 44px;
+    border-radius: 999px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.35);
+    transition:
+      transform 0.15s,
+      box-shadow 0.15s;
+    z-index: 99; /* Z-index tinggi agar selalu di paling atas */
+  }
+  .qris-btn::before {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    border-radius: 999px;
+    pointer-events: none;
+  }
+  .qris-btn:hover {
+    transform: translateX(-50%) translateY(-2px);
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.45);
+  }
+  .qris-btn:active {
+    transform: translateX(-50%) scale(0.96);
+  }
+  .qris-text {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ============ HOME INDICATOR ============ */
+  .home-indicator {
+    width: 130px;
+    height: 5px;
+    background: #94a3b8;
+    border-radius: 999px;
+    margin: 14px auto 6px;
+  }
+  .home-indicator.dark {
+    background: #0f172a;
+    opacity: 0.8;
+  }
+
+  /* ============ SUCCESS SCREEN ============ */
+  #success-screen {
+    background: #ffffff;
+  }
+  .success-wrap {
+    flex: 1;
+    padding: 30px 24px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .success-illus {
+    margin-top: 8px;
+  }
+  .success-title {
+    margin-top: 14px;
+    font-size: 20px;
+    font-weight: 800;
+    color: #0f172a;
+    text-align: center;
+  }
+  .success-amount {
+    margin-top: 6px;
+    font-size: 42px;
+    font-weight: 900;
+    color: #0f172a;
+    letter-spacing: -1px;
+  }
+  .success-meta {
+    margin-top: 6px;
+    text-align: center;
+    color: #475569;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .success-actions {
+    display: flex;
+    gap: 40px;
+    margin-top: 22px;
+  }
+  .round-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.15s;
+  }
+  .round-action:active {
+    transform: scale(0.94);
+  }
+  .round-ic {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .round-ic.orange-solid {
+    background: #f97316;
+  }
+  .round-action small {
+    font-size: 13px;
+    font-weight: 600;
+    color: #0f172a;
+  }
+
+  .info-block {
+    width: 100%;
+    margin-top: 18px;
+  }
+  .info-block label {
+    display: block;
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  .info-box {
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 14px 16px;
+    background: #fff;
+  }
+  .info-primary {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0f172a;
+  }
+  .info-secondary {
+    font-size: 14px;
+    color: #475569;
+    margin-top: 4px;
+  }
+
+  .success-footer {
+    border-top: 1px solid #f1f5f9;
+    padding: 14px 20px 8px;
+    background: #fff;
+  }
+  .btn-primary {
+    width: 100%;
+    background: #5eead4;
+    color: #0f172a;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 18px;
+    border-radius: 999px;
+    transition:
+      background 0.15s,
+      transform 0.12s;
+  }
+  .btn-primary:hover {
+    background: #2dd4bf;
+  }
+  .btn-primary:active {
+    transform: scale(0.98);
+  }
+
+  /* ============ SCREEN TRANSITIONS ============ */
+  .screen.entering {
+    animation: fadeSlide 0.35s ease-out;
+  }
+  @keyframes fadeSlide {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 380px) {
+    .greeting-text {
+      font-size: 15px;
+    }
+    .rek-num {
+      font-size: 20px;
+    }
+    .success-amount {
+      font-size: 36px;
+    }
+  }
+</style>
+
+<script>
+  // ================= DEMO WONDR BY BNI — QRIS FLOW =================
+  (function () {
+    const homeScreen = document.getElementById("home-screen");
+    const successScreen = document.getElementById("success-screen");
+    const qrisBtn = document.getElementById("qrisButton");
+    const backBtn = document.getElementById("backHomeBtn");
+
+    const dateEl = document.getElementById("successDate");
+    const timeEl = document.getElementById("successTime");
+    const refEl = document.getElementById("successRefId");
+
+    function pad(n) {
+      return n < 10 ? "0" + n : "" + n;
+    }
+
+    function formatDate(d) {
+      const bulan = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "Mei",
+        "Jun",
+        "Jul",
+        "Agu",
+        "Sep",
+        "Okt",
+        "Nov",
+        "Des",
+      ];
+      return (
+        pad(d.getDate()) + " " + bulan[d.getMonth()] + " " + d.getFullYear()
+      );
+    }
+
+    function formatTime(d) {
+      return (
+        pad(d.getHours()) +
+        ":" +
+        pad(d.getMinutes()) +
+        ":" +
+        pad(d.getSeconds())
+      );
+    }
+
+    function generateRefId(d) {
+      const stamp =
+        d.getFullYear() +
+        pad(d.getMonth() + 1) +
+        pad(d.getDate()) +
+        pad(d.getHours()) +
+        pad(d.getMinutes()) +
+        pad(d.getSeconds());
+      const rand = Math.floor(1000 + Math.random() * 9000);
+      return stamp + rand + "21";
+    }
+
+    function showScreen(el) {
+      document
+        .querySelectorAll(".screen")
+        .forEach((s) => s.classList.remove("active", "entering"));
+      el.classList.add("active", "entering");
+      window.scrollTo({
+        top: 0,
+        behavior: "instant" in window ? "instant" : "auto",
+      });
+    }
+
+    function goToSuccess() {
+      const now = new Date();
+      dateEl.textContent = formatDate(now);
+      timeEl.textContent = formatTime(now);
+      refEl.textContent = generateRefId(now);
+      showScreen(successScreen);
+    }
+
+    function goToHome() {
+      showScreen(homeScreen);
+    }
+
+    if (qrisBtn) qrisBtn.addEventListener("click", goToSuccess);
+    if (backBtn) backBtn.addEventListener("click", goToHome);
+
+    // Toggle saldo (visual only)
+    const eyeBtn = document.querySelector('[data-testid="toggle-saldo-btn"]');
+    const saldoEl = document.querySelector(".rek-saldo");
+    let saldoShown = false;
+    if (eyeBtn && saldoEl) {
+      eyeBtn.addEventListener("click", function () {
+        saldoShown = !saldoShown;
+        saldoEl.textContent = saldoShown ? "Rp2.450.000" : "Rp********";
+      });
+    }
+
+    // Tabs (visual only)
+    document.querySelectorAll(".tab").forEach((t) => {
+      t.addEventListener("click", () => {
+        document
+          .querySelectorAll(".tab")
+          .forEach((x) => x.classList.remove("active"));
+        t.classList.add("active");
+      });
+    });
+  })();
+</script>
